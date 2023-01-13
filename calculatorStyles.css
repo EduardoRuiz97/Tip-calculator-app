@@ -1,0 +1,257 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+:root {
+  --StrongCyan: hsl(172, 67%, 45%);
+
+  --VeryDarkCyan: hsl(183, 100%, 15%);
+  --DarkGrayishCyan: hsl(186, 14%, 43%);
+  --GrayishCyan: hsl(184, 14%, 56%);
+  --LightGrayishCyan: hsl(185, 41%, 84%);
+  --VeryLightGrayishCyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--LightGrayishCyan);
+  font-size: 24px;
+}
+
+.img__logo {
+  width: 88px;
+  margin: 50px 0px 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main__container {
+  width: 100%;
+  background-color: var(--White);
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  border-radius: 20px;
+}
+
+label {
+  font-size: 0.5em;
+  color: var(--DarkGrayishCyan)
+}
+
+.input__bill, .input__number__people {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--VeryLightGrayishCyan);
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+input {
+  width: 80%;
+  text-align: right;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 0.8em;
+  color: var(--VeryDarkCyan);
+}
+
+.input__img {
+  height: 0.8em;
+}
+
+.porcentage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.7em;
+  row-gap: 0.7em;
+}
+
+.button__porcentage {
+  border: none;
+  background-color: var(--VeryDarkCyan);
+  color: var(--White);
+  font-size: 0.85em;
+  text-align: center;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button__porcentage:hover {
+  background-color: var(--StrongCyan);
+  color: var(--VeryDarkCyan);
+}
+
+.button__porcentage:focus {
+  border: 1px solid var(--StrongCyan);
+  background-color: var(--White);
+  color: var(--VeryDarkCyan);
+}
+
+#custom {
+  width: 100%;
+  background-color: var(--VeryLightGrayishCyan);
+  color: var(--DarkGrayishCyan);
+  text-align: center;
+  font-size: 0.85em;
+  outline: none;
+}
+
+#custom::placeholder {
+  text-align: right;
+  padding-right: 15px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.text__people__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.warning__text {
+  color: rgb(230, 127, 59);
+  font-size: 0.5em;
+  display: none;
+}
+
+.warning__text__show {
+  display: block;
+}
+
+.input__number__people {
+  cursor: pointer;
+}
+
+.wrong__number__of__persons{
+  border: 1px solid rgb(230, 127, 59);
+}
+
+.total__tip__container {
+  background-color: var(--VeryDarkCyan);
+  border-radius: 10px;
+  padding: 35px 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.total__tip__container__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.8em;
+  align-items: center;
+}
+
+span p{
+  color: var(--White);
+  font-size: 0.5em;
+}
+
+.pperson {
+  color: var(--DarkGrayishCyan);
+}
+
+fieldset {
+  border: none;
+}
+
+.total__amount {
+  font-size: 1em;
+  color: var(--StrongCyan);
+}
+
+.reset__button {
+  background-color: var(--StrongCyan);
+  color: var(--VeryDarkCyan);
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 0.8em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.reset__button {
+  background-color: var(--StrongCyan);
+}
+
+.attribution { 
+  font-size: 15px; 
+  text-align: center; 
+  padding: 20px;
+}
+
+.attribution a { 
+  color: var(--VeryDarkCyan); 
+}
+
+@media only screen and (min-width: 500px) {
+  .main__container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .total__tip__container {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px 40px;
+    gap: 2.5em;
+  }
+
+  .reset__button {
+    margin-top: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__container {
+    width: 65%;
+    height: 50%;
+  }
+
+  .img__logo {
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+  label {
+    font-size: 0.85em;
+  }
+
+  span {
+    font-size: 1.5em;
+  }
+
+  .reset__button {
+    height: 70px;
+  }
+}
